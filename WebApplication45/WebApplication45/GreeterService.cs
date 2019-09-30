@@ -11,7 +11,7 @@ namespace WebApplication45
     {
         public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
         {
-            return base.SayHello(request, context);
+            return Task.FromResult(new HelloReply() { Message = "woop" });
         }
     }
 }
